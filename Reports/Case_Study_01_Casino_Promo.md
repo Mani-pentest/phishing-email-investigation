@@ -228,7 +228,7 @@ Do not block `209.85.222.51` solely because it appears in the email headers.
 
 ## Evidence
 
-Screenshots stored in `Evidence/Case_02/`:
+Screenshots stored in `Evidence/Case_01/`:
 
 1. `01_Sender_Details.png` — Sender, recipient, subject, date and Return-Path.
 2. `02_Authentication_Results.png` — SPF, DKIM, DMARC and Received-SPF results.
