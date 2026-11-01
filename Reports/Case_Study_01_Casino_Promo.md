@@ -109,10 +109,7 @@ The scanner did not load the website. Therefore, the final destination, redirect
 
 ### DNS investigation
 
-Google Admin Toolbox Dig returned `Record not found` for:
-
-- A record
-- MX record
+A Google Admin Toolbox Dig lookup for the A record of `wizardstriker.com` returned `Record not found!` (screenshot `06B_Dig_DNS_Lookup.png`). Other record types were not queried.
 
 VirusTotal had previously reported:
 
@@ -152,6 +149,12 @@ Historical DNS reported by VirusTotal also included an SPF TXT record for the do
 | Nameservers | DNS1.REGISTRAR-SERVERS.COM and DNS2.REGISTRAR-SERVERS.COM |
 
 The `clientHold` status generally means the domain is not published in the DNS zone and may not resolve. This may explain the later DNS failures, but the exact cause was not independently established. The domain was created on 28 January 2025, about 18 months before the email was sent. The record was last updated on 20 August 2026, three weeks after the email date, so the hold may have been applied after the campaign, possibly following abuse reports. That is an observation, not a confirmed cause.
+
+### Landing page: limitation and further checks
+
+The landing page was never observed. urlscan could not resolve the domain, the registry status is `clientHold`, and a Dig lookup for the A record returned nothing. The report therefore cannot say whether the page asked for credentials, payment details, or a download. The classification rests on the email content, the authentication results, and the reputation data.
+
+Further checks that could close this gap: searching urlscan.io for earlier public scans of the domain, reviewing the VirusTotal Relations and URLs tabs for observed URLs and redirects, and looking for an archived copy of the page.
 
 ### Attachment analysis
 
@@ -243,7 +246,7 @@ Do not block `209.85.222.51` solely because it appears in the email headers.
 |---|---|
 | Time of Activity | 31 July 2026, 15:46:12 -0700, according to the Date header. |
 | Affected Entities | The intended recipient was `phishing@pot`. Actual delivery to or interaction by other users was not established. |
-| Reason for True Positive | The email is a genuine unsolicited gambling promotion with suspicious characteristics. It is not a confirmed credential-phishing or malware incident. |
+| Reason for Classification | The email is an unsolicited gambling promotion with suspicious characteristics: SPF failure, a DKIM signing domain that does not match the From domain, a domain flagged by 3 of 92 vendors, and a registry hold. It is not a confirmed credential-phishing or malware incident. |
 | Reason for Escalating | SPF failure, domain reputation detections, multiple promotional URLs and subsequent DNS resolution failures warrant security review. |
 | Remediation Actions | Preserve the email, search for similar messages, quarantine where appropriate and monitor for clicks or other user interaction. |
 | Attack Indicators | `wizardstriker.com`, sender address, promotional URLs, SPF failure and VirusTotal detections. |
@@ -277,6 +280,10 @@ Screenshots stored in `Evidence/Case_01/`.
 **6. URLScan DNS error** (`06_DNS_URLScan_Results.png`)
 
 ![URLScan DNS error](../Evidence/Case_01/06_DNS_URLScan_Results.png)
+
+**6B. Dig lookup for the A record** (`06B_Dig_DNS_Lookup.png`)
+
+![Dig A record lookup](../Evidence/Case_01/06B_Dig_DNS_Lookup.png)
 
 **7. ICANN domain registration data** (`07_ICANN_Domain_Registration.png`)
 
