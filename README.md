@@ -46,19 +46,20 @@ phishing-email-investigation/
 
 ## Case Studies
 
-| Case | Sample | Lure | Status |
-|---|---|---|---|
-| [Case 01](Reports/Case_Study_01_Casino_Promo.md) | Phishing Pot sample-12 | Online casino promo code | In progress |
+| Case | Sample | Lure | Verdict | Status |
+|---|---|---|---|---|
+| [Case 01](Reports/Case_Study_01_Casino_Promo.md) | Phishing Pot sample-12 | Online casino promo code | Suspicious unsolicited promotional spam (Low to Medium) | Complete |
+| Case 02 | Phishing Pot sample-10007 | Ledger firmware update | To be determined | Planned |
 
 ## Tools Used
 
 | Purpose | Tool |
 |---|---|
-| Header review | Raw headers in a text editor, plus an online header analyzer |
-| URL scanning | urlscan.io (unlisted scans) |
-| Reputation checks | VirusTotal, AbuseIPDB |
-| Domain information | WHOIS / ICANN lookup |
-| Decoding | CyberChef |
+| Header and body review | Raw .eml file in a text editor (VS Code) |
+| URL scanning | urlscan.io |
+| Reputation checks | VirusTotal |
+| DNS lookups | Google Admin Toolbox Dig |
+| Domain registration | ICANN Lookup |
 
 ## Skills Demonstrated
 
