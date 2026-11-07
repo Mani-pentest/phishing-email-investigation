@@ -33,9 +33,11 @@ No scripts or automation were used. Every finding comes from reading the raw ema
 phishing-email-investigation/
 ├── README.md
 ├── Reports/
-│   └── Case_Study_01_Casino_Promo.md
+│   ├── Case_Study_01_Casino_Promo.md
+│   └── Case_Study_02_Ledger_Recovery_Phrase.md
 ├── Evidence/
-│   └── Case_01/
+│   ├── Case_01/
+│   └── Case_02/
 ├── Templates/
 │   └── Case_Report_Template.md
 ```
@@ -49,7 +51,8 @@ phishing-email-investigation/
 | Case | Sample | Lure | Verdict | Status |
 |---|---|---|---|---|
 | [Case 01](Reports/Case_Study_01_Casino_Promo.md) | Phishing Pot sample-12 | Online casino promo code | Suspicious unsolicited promotional spam (Low to Medium) | Complete |
-| Case 02 | Phishing Pot sample-10007 | Ledger firmware update | To be determined | Planned |
+| [Case 02](Reports/Case_Study_02_Ledger_Recovery_Phrase.md) | Phishing Pot sample-6413 | Fake Ledger data breach notice asking for a recovery phrase | Phishing: recovery phrase harvesting (High potential impact) | Complete |
+| Case 03 | To be selected | Attachment or invoice lure | To be determined | Planned |
 
 ## Tools Used
 
