@@ -34,10 +34,12 @@ phishing-email-investigation/
 ├── README.md
 ├── Reports/
 │   ├── Case_Study_01_Casino_Promo.md
-│   └── Case_Study_02_Ledger_Recovery_Phrase.md
+│   ├── Case_Study_02_Ledger_Recovery_Phrase.md
+│   └── Case_Study_03_Microsoft_Terms_Update.md
 ├── Evidence/
 │   ├── Case_01/
-│   └── Case_02/
+│   ├── Case_02/
+│   └── Case_03/
 ├── Templates/
 │   └── Case_Report_Template.md
 ```
@@ -52,7 +54,7 @@ phishing-email-investigation/
 |---|---|---|---|---|
 | [Case 01](Reports/Case_Study_01_Casino_Promo.md) | Phishing Pot sample-12 | Online casino promo code | Suspicious unsolicited promotional spam (Low to Medium) | Complete |
 | [Case 02](Reports/Case_Study_02_Ledger_Recovery_Phrase.md) | Phishing Pot sample-6413 | Fake Ledger data breach notice asking for a recovery phrase | Phishing: recovery phrase harvesting (High potential impact) | Complete |
-| Case 03 | To be selected | Attachment or invoice lure | To be determined | Planned |
+| [Case 03](Reports/Case_Study_03_Microsoft_Terms_Update.md) | Phishing Pot sample-10026 | Fake Microsoft terms update asking for billing sign-in, with Apple profile attachments | Phishing: credential and payment harvesting (High potential impact) | Complete |
 
 ## Tools Used
 
