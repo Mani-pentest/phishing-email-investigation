@@ -65,6 +65,7 @@ phishing-email-investigation/
 | Reputation checks | VirusTotal |
 | DNS lookups | Google Admin Toolbox Dig |
 | Domain registration | ICANN Lookup |
+| Decoding and hashing | CyberChef |
 
 ## Skills Demonstrated
 
